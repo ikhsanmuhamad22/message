@@ -3,11 +3,14 @@ const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
+const btnGroup = document.querySelector(".btn-first");
+const btnSecond = document.querySelector(".btn-second");
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = "Yay, see you on the 18th!";
-  gif.src =
-    "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
+  question.innerHTML = "makasihhhhh ❤️❤️";
+  gif.src = "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
+  btnGroup.remove();
+  btnSecond.style.visibility = "visible";
 });
 
 noBtn.addEventListener("mouseover", () => {
@@ -20,4 +23,19 @@ noBtn.addEventListener("mouseover", () => {
 
   noBtn.style.left = randomX + "px";
   noBtn.style.top = randomY + "px";
+
+  // Kurangi ukuran tombol tanpa batas minimum
+  const currentWidth = noBtn.offsetWidth;
+  const currentHeight = noBtn.offsetHeight;
+
+  const newWidth = currentWidth * 0.9;
+  const newHeight = currentHeight * 0.9;
+
+  noBtn.style.width = newWidth + "px";
+  noBtn.style.height = newHeight + "px";
+
+  // Perkecil ukuran font sebanding
+  const currentFontSize = parseFloat(window.getComputedStyle(noBtn).fontSize);
+  const newFontSize = currentFontSize * 0.9;
+  noBtn.style.fontSize = newFontSize + "px";
 });

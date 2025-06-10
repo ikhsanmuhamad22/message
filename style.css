@@ -45,12 +45,17 @@ button {
     border: 2px solid #e94d58;
     font-size: 1.2em;
 }
-button:nth-child(1) {
+.yes-btn {
     margin-left: -200px;
     background: #e94d58;
 }
-button:nth-child(2) {
+.no-btn {
     margin-right: -200px;
     background: white;
     color: #e94d58;
+}
+
+.btn-second {
+    background: #e94d58;
+    visibility: hidden;
 }
