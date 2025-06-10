@@ -13,7 +13,7 @@ yesBtn.addEventListener("click", () => {
   btnSecond.style.visibility = "visible";
 });
 
-noBtn.addEventListener("mouseover", () => {
+noBtn.addEventListener("click", () => {
   const noBtnRect = noBtn.getBoundingClientRect();
   const maxX = window.innerWidth - noBtnRect.width;
   const maxY = window.innerHeight - noBtnRect.height;
@@ -28,14 +28,14 @@ noBtn.addEventListener("mouseover", () => {
   const currentWidth = noBtn.offsetWidth;
   const currentHeight = noBtn.offsetHeight;
 
-  const newWidth = currentWidth * 0.9;
-  const newHeight = currentHeight * 0.9;
+  const newWidth = currentWidth * 0.7;
+  const newHeight = currentHeight * 0.7;
 
   noBtn.style.width = newWidth + "px";
   noBtn.style.height = newHeight + "px";
 
   // Perkecil ukuran font sebanding
   const currentFontSize = parseFloat(window.getComputedStyle(noBtn).fontSize);
-  const newFontSize = currentFontSize * 0.9;
+  const newFontSize = currentFontSize * 0.7;
   noBtn.style.fontSize = newFontSize + "px";
 });
